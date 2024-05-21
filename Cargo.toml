@@ -1,4 +1,14 @@
-workspace = { members = ["src/inference", "src/server"] }
+[workspace]
+resolver = "2"
+
+workspace = { members = ["src/inference", "src/server", "src/tui"] }
+
+[workspace.dependencies]
+candle-core = { git = "https://github.com/huggingface/candle.git" }
+candle-nn = { git = "https://github.com/huggingface/candle.git" }
+candle-transformers = { git = "https://github.com/huggingface/candle.git" }
+
+
 [package]
 name = "aif"
 version = "0.1.0"
@@ -6,8 +16,4 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-crossterm = "0.27.0"
-ratatui = "0.26.3"
-reqwest = "0.12.4"
-tokio = { version = "1.37.0", features = ["full"] }
+
