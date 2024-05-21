@@ -1,3 +1,4 @@
+workspace = { members = ["src/inference", "src/server"] }
 [package]
 name = "aif"
 version = "0.1.0"
